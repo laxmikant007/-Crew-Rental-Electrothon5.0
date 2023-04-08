@@ -9,7 +9,7 @@ Crew-Rental Store, where we make it easy and affordable to get the help you need
 
 # Project Status : 
 
-### While the project is being built, you can look at the deployed link : https://crew-rental-91qm.onrender.com/
+### While the project is being built, you can look at the deployed link : https://rental-frontend.onrender.com/
 
 
 ## Deployment frontend :
@@ -96,21 +96,8 @@ Overall, we strive to provide the best possible experience for our customers by 
 
 ## Screenshots
 
-![App Screenshot](https://drive.google.com/u/0/uc?id=1uSfxJ0V0hbHzoACRT4L6qp47-mZ_MRIl&export=download)
-
-![App Screenshot](https://drive.google.com/u/0/uc?id=1pEtnPKn3zXXMxRgSummIzfEEDWiI8-VV&export=download)
-
-![App Screenshot](https://drive.google.com/u/0/uc?id=1l9kB8b4YqP4OXY5AanrLuElcHGt3f-v3&export=download)
 
 
-![App Screenshot](https://drive.google.com/u/0/uc?id=1A3HgVk-V4ljEKo2KLQtv2aHefp-JVdwC&export=download)
-
-![App Screenshot](https://drive.google.com/u/0/uc?id=1ho-9NjOAPbEyU8sgWbd7ZY2SxQeUCgCE&export=download)
-
-
-![App Screenshot](https://drive.google.com/u/0/uc?id=1N1r4L7GSzll9Hz5miDs4S-VCR4jzgu8-&export=download)
-
-![App Screenshot](https://drive.google.com/u/0/uc?id=1BZ1pu-ncKb6L86LFDFbeINHKinZPHxN2&export=download)
 
 
 
