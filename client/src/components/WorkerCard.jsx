@@ -43,11 +43,6 @@ const WorkerCard = ({ worker }) => {
  
 
   const handleClick = () => {
-
-    // setProfile(worker);
-    // console.log("profile is ", profile)
-
-
     navigate('/profileDashbord', {state:{worker}});
   }
 

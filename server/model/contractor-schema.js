@@ -41,6 +41,10 @@ age:{
 phone:{
     type:Number
 },
+     verified:{
+        type:Boolean,
+        default:false
+     },
 businessName:{
     type:String
 }

@@ -99,9 +99,7 @@ export const getWorkerData=async (id)=>{
       
     }
     catch(error){
-
     }
-
 }
 
 
@@ -131,17 +129,33 @@ export const getAllContractors=async()=>{
 
 
 //const rentalProvider
-
 export const rentalProvider=async(data)=>{
   try{
-    const  result=await axios.post(`${URL}/registerRentalProvider`,data);
+    console.log("data is ", data);
+    let  result=await axios.post(`${URL}/registerRentalProvider`,data);
     return result;
   }
   catch(error){
     console.log("error while registering renatl provider ", error.message);
   }
 }
-
+export const getProductProvider=async(id)=>{
+  try{
+     console.log("id is ", id)
+    let result=await axios.get(`${URL}/productProvider/${id}`)
+    console.log("erre -- ", result.data)
+    //  result=await result.json();
+      if(result){
+        return result.data
+      }
+      else{
+        return {"error":'Not any products'};
+      }
+  }
+  catch(error){
+    console.log("error while getting a provider", error.message);
+  }
+}
 export const getAllProductProvider= async()=>{
       try{
         const result=await axios.get(`${URL}/getAllProductProvider`);
@@ -162,7 +176,7 @@ export const getAllProductProvider= async()=>{
 //api for products
 export const addProduct=async(data)=>{
    try{
-        const result=axios.post(`${URL}/addProduct`,data);
+        const result=await axios.post(`${URL}/addProduct`,data);
         return  result;
    }
    catch(error){
@@ -193,7 +207,7 @@ export const getAllProducts=async()=>{
 export const getProduct=async(key)=>{
   try{
 
-    let result=await axios.get(`${URL}/${key}`)
+    let result=await axios.get(`${URL}/getProduct/${key}`)
      result=await result.json();
       if(result){
         return result

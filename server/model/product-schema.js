@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const productSchema= new mongoose.Schema({
-     id:{
+     userId:{
         type:String
      },
      name:{
@@ -10,10 +10,14 @@ const productSchema= new mongoose.Schema({
      company:{
         type:String
      },
+     verified:{
+        type:Boolean,
+        default:false
+     },
      price:{
         type:String
      },
-     image:{
+     productPic:{
         type:String
      },
      description:{

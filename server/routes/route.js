@@ -4,7 +4,7 @@ import { workerRegister, getAllWorkers, getWorker } from '../controllers/worker-
 import { contractorRegister, getAllContractors } from '../controllers/contractor-controller.js';
 
 import { addProduct, getAllProducts , getProduct} from '../controllers/product-controller.js';
-import { addRentalProvider, getAllProductProvider } from '../controllers/rental-provider-controller.js';
+import { addRentalProvider, getAllProductProvider , getProvider} from '../controllers/rental-provider-controller.js';
 const router=express.Router();
 
 
@@ -35,10 +35,11 @@ router.post("/addProduct",addProduct);
 router.get("/getProducts", getAllProducts)
 router.get("/getProduct/:key",getProduct);
 
+
 //Rental Provider section
 router.post("/registerRentalProvider",addRentalProvider)
 router.get("/getAllProductProvider",getAllProductProvider)
-
+router.get("/productProvider/:id",getProvider);
 
 
 export default router;
