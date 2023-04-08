@@ -29,6 +29,7 @@ import AccountProvider from './context/AccountProvider';
 import Product from './components/Product/Product';
 import ProductDashboard from './components/Product/ProductDashboard';
 import PrivateComponent from './components/PrivateComponent';
+import AdminDashboard from './components/Admin/AdminDashboard';
 
 
 import Register from './components/Pages/register/Register';
@@ -63,7 +64,8 @@ function App() {
       <Route path="/ThreedmapHouse" element={<ThreedmapHouse/>}/>
       <Route path="/aiChat" element={<AiChat/>}/>
       <Route path="/EngineerPage" element={<EngineerPage/>}/>
-      <Route path="/ProductDashboard" element={<ProductDashboard/>}/>
+      <Route path="/productDashboard" element={<ProductDashboard/>}/>
+      <Route path="/adminDashboard" element={<AdminDashboard/>}/>
 
       <Route path="/contact" element={<Contact/>}/>
       {/* <Route path="/Product" element={<Product/>}/> */}
