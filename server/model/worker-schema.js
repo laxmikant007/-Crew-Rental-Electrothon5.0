@@ -23,7 +23,6 @@ const workerSchema= new mongoose.Schema({
     fullName:{
         type:String,
         default:"Ram Lal"
-
     },
     email:{
         type:String,

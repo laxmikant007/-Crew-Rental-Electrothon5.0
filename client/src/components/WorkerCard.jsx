@@ -49,6 +49,7 @@ const WorkerCard = ({ worker }) => {
 
   return (
     <>
+      {/* <div className= "container"> */}
       <div  onClick ={handleClick} className="card-workers">
         <div className="image-container-workers">
           {/* <img src={'https://media.istockphoto.com/id/1346124841/photo/successful-construction-site-worker-thinking.jpg?b=1&s=170667a&w=0&k=20&c=Xzq26ISOhRuQK95yVQKmgAqKS6IexXZNqf1TBmHjeZA='} alt={worker.name} /> */}
@@ -65,6 +66,7 @@ const WorkerCard = ({ worker }) => {
           <p style={parastyle}>Phone: <span style={variableFields} >{worker.phone}</span></p>
         </div>
       </div>
+      {/* </div> */}
     </>
   );
 };

@@ -58,8 +58,8 @@ const ProductCard = ({ product }) => {
     return (
       <div className="card-workers-group" style={{cursor:"pointer"}}>
         <div className="image-container-workers-group">
-          {/* <img src={product.image} alt={product.name} /> */}
-          <img src="" alt="" />
+          <img src={product.image} alt="loading" />
+          {/* <img src="" alt="" /> */}
         </div>
         <div className="details-workers-group">
           <h2 style={nameWorker}>{product.name}</h2>

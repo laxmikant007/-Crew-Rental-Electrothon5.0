@@ -9,10 +9,14 @@ import Header from './Header';
 
 function   AdminLabour()  {
   const [isAvailable, setIsAvailable] = useState(false);
-
+   const [fullName,setFullName]=useState("");
   const handleAvailabilityChange = () => {
     setIsAvailable(!isAvailable);
   };
+  const data=JSON.parse(localStorage.getItem("user"))
+  setFullName(data.fullName)
+  // console.log("data is ",data)
+
 
   return (
     <>
@@ -23,7 +27,7 @@ function   AdminLabour()  {
           <img src={workerimg} alt="Profile" />
         </div>
         <div className="profile-details">
-          <h2>Angel Priya</h2>
+          <h2>{fullName}</h2>
           <p>Phone: 9414173314</p>
         </div>
       </div>

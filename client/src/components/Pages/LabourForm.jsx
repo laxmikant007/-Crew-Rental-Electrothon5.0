@@ -43,14 +43,14 @@ function Labourform() {
         console.log("aadhar pic link ",aadharPicLink);
        
 
-      if(!address || !phone || !age || !pin || !price || !experience || !aadharPic || !profilePic ||  !aadhar){
-        console.log("mouse clicked");
-        toast("Form is not filled properly",{
-            autoClose:2000
-    })
-      }
+    //   if(!address || !phone || !age || !pin || !price || !experience || !aadharPic || !profilePic ||  !aadhar){
+    //     console.log("mouse clicked");
+    //     toast("Form is not filled properly",{
+    //         autoClose:2000
+    // })
+    //   }
 
-      else{
+    //   else{
         setWorkerData();
     
   
@@ -99,7 +99,7 @@ function Labourform() {
 
         console.log("aadhar pis is ",aadharPic);
         console.log("profile pic is ",profilePic)   
-    }
+    // }
     };
     const setWorkerData=async ()=>{
         const data=localStorage.getItem("user")

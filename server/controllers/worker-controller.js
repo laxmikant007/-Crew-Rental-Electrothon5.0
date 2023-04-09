@@ -1,4 +1,5 @@
 
+// import { filterWorker } from "../../client/src/service/api.js";
 import Worker from "../model/worker-schema.js";
 import Jwt  from "jsonwebtoken";
 
@@ -50,6 +51,22 @@ export const getWorker=async(req,res)=>{
     console.log("error while getting user data ", error.message);
     res.status(500).json({error:error.message});
    }
+}
+
+
+
+
+export const filterWorker=async(req,res)=>{
+   console.log("req from frontend is ", req.params)
+  try{
+    const result=await Worker.find({role:req.params.id1, experience:req.params.id4, price:req.params.id3, address:req.params.id2})
+     console.log("result is ", result)
+    res.status(200).json(result)
+
+  }
+  catch(error){
+    res.status(500).json({msg:error.message})
+  }
 }
 
 

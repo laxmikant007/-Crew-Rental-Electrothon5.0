@@ -124,6 +124,7 @@ const variableFieldsYes = {
 const WorkerCard = ({ worker }) => {
   return (
     <div className="card-workers-group">
+    {/* // <div className="workers-page-workers"> */}
       <div className="image-container-workers-group">
         <img src={worker.imageUrl} alt={worker.name} />
       </div>
@@ -145,8 +146,9 @@ const GroupOfWorkers = () => {
   return (
     <>
           <Header />
-      <h1 style={{margin:"40px"}}>Group of Workers Page</h1>
-    <div className="workers-page-workers-group">
+      <h1 style={{marginTop:"100px"}}>Group of Workers Page</h1>
+      <div className='new-group-worker-sec'>
+    {/* <div className="workers-page-workers-group"> */}
     <div className="filter-section">
   <h3 >Filter Group Workers</h3>
   <form>
@@ -202,6 +204,14 @@ const GroupOfWorkers = () => {
       </form>
       </div>
 
+        {/* <div className='section-filter'>
+
+            <h3 >Filter Group Workers</h3>
+
+
+
+
+        </div> */}
 
 
 

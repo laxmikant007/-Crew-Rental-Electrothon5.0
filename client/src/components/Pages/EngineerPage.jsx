@@ -220,8 +220,10 @@ const EngineerPage = () => {
 
 
 
-      <div className="container">
-      <div className="workers-container-workers">
+      {/* <div className="container"> */}
+      <div className="Container-main-worker">
+      {/* <div className="workers-container-workers"> */}
+      <div className="workers-page-workers-group">
         {workers.map((worker, index) => {
           return <WorkerCard key={worker.id} worker={worker} />;
         })}

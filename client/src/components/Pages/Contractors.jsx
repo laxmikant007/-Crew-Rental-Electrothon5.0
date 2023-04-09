@@ -245,8 +245,8 @@ const Contractors = () => {
       </form>
       </div>
 
-      <div className="container">
-      <div className="workers-container-workers">
+      <div className="Container-main-worker">
+      <div className="workers-page-workers-group">
         {contractors.map((contractor, index) => {
           return <WorkerCard key={contractor._id} contractor={contractor} />;
         })}

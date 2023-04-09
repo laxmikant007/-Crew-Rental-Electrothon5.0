@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import "../../css/Groupworkers.css";
 import Header from "../Pages/Header"
 import Footer from "../Footer";
-import { getAllProducts, getAllProductProvider } from '../../service/api';
+import { getAllProducts, getAllProductProvider , filterProduct } from '../../service/api';
+// import { getAllProducts, getAllProductProvider  } from '../../service/api';
+
 import ProductCard from "./ProductCard";
 
 
@@ -14,6 +16,8 @@ const Product = () => {
   const [products,setProducts]=useState([]);
   const [price, setPrice]=useState("100");
   const [productProvider, setProductProvider]=useState([]);
+  const [company, setCompany]=useState("All Companies");
+  const [city, setCity]=useState("All Cities");
 
   useEffect(()=>{
         getProducts();
@@ -34,6 +38,22 @@ const Product = () => {
         setProductProvider(result.data);
  }
 
+ const handleClick=async(e)=>{
+  e.preventDefault();
+     const res=await filterProduct({
+      comapny:company,
+      city:city,
+      price:price,
+      city:city
+     })
+     if(res){
+      setProducts(res.data);
+      console.log("res hhhh ",res.data)
+     }
+  
+     
+ }
+
 
     //  console.log("Workers from backend are ",workers);
 
@@ -42,13 +62,15 @@ const Product = () => {
   return (
     <>
           <Header />
-      <h1 style={{margin:"40px"}}>Group of Workers Page</h1>
-    <div className="workers-page-workers-group">
+      <h1 style={{marginTop:"100px"}}>Rental Product Page</h1>
+      <div className='new-group-worker-sec'>
+    {/* <div className="workers-page-workers-group"> */}
+
     <div className="filter-section">
   <h3 >Filter Products</h3>
   <form>
     <label for="location">Company:</label>
-    <select name="location" id="location" value="All companies">
+    <select  value={company} style={{"cursor":"pointer"}} onChange={(e)=>{setCompany(e.target.value)}} id="location">
       <option value="all">All Companies</option>      
          {   products.map((product) => {
           return  <option value={product.company}>{product.company}</option>
@@ -58,8 +80,8 @@ const Product = () => {
     </select>
 
     <label for="city">City:</label>
-    <select name="city" id="city">
-      <option value="all">All Cities</option>
+    <select value={city} style={{"cursor":"pointer"}} onChange={(e)=>(setCity(e.target.value))}  name="city" id="city">
+      <option value="all">All City</option>
       {   productProvider.map((productProvider) => {
           return  <option value={productProvider.address}>{productProvider.address}</option>
         })   }
@@ -82,7 +104,7 @@ const Product = () => {
 
       
     </select>    
-      <button type="submit">Apply Filter</button>
+    <button type="submit" onClick={handleClick}>Apply Filter</button>
       </form>
       </div>
       <div className="container">

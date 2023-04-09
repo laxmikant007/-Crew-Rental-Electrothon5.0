@@ -90,7 +90,6 @@ export const getAllWorkers=async()=>{
       console.log("Error while getting all worksers ", error.messsage);
     }
 }
-
 export const getWorkerData=async (id)=>{
     console.log("id is ", id);
     try{
@@ -100,6 +99,31 @@ export const getWorkerData=async (id)=>{
     }
     catch(error){
     }
+}
+export const filterWorker=async(data)=>{
+  try{
+     let result= await axios.get(`${URL}/filterWorker/${data.role}/${data.address}/${data.price}/${data.experience}`);
+      console.log("data from back is ",result)
+        // result=await result.json();
+     return result;
+        
+  }
+  catch(error){
+    console.log("Error while filtering product ", error.message);
+  }
+}
+
+//filterproduct api
+export const filterProduct=async(data)=>{
+  try{
+      let result= await axios.get(`${URL}/filterProduct/${data.category}/${data.company}/${data.price}`);
+      console.log("data from back is ",result)
+        // result=await result.json();
+      return result;
+  }
+  catch(error){
+    console.log("Error while filtering product ", error.message);
+  }
 }
 
 
@@ -168,6 +192,17 @@ export const getAllProductProvider= async()=>{
       }
 }
 
+export const updateRentalProvider=async(data)=>{
+  try{    
+ let result= await axios.put(`${URL}/updateRentalProvider/${data._id}`)
+ result=await result.json()
+  }
+  catch(error){
+   console.log("error while updating product ", error.message);
+  }
+}
+
+
 
 
 
@@ -181,7 +216,6 @@ export const addProduct=async(data)=>{
    }
    catch(error){
     console.log("error file adding products");
-    
    }
 }
 
@@ -196,7 +230,6 @@ export const getAllProducts=async()=>{
     else{
       return {"error":'Not any products'};
     }
-
   }
   catch(error){
     console.log("error while getting all products ", error.message);
@@ -206,7 +239,6 @@ export const getAllProducts=async()=>{
 
 export const getProduct=async(key)=>{
   try{
-
     let result=await axios.get(`${URL}/getProduct/${key}`)
      result=await result.json();
       if(result){
@@ -217,9 +249,21 @@ export const getProduct=async(key)=>{
       }
   }
   catch(error){
-
+     console.log("error while fetching a product ")
   }
 }
+
+export const updateProduct=async(data)=>{
+  try{    
+ let result= await axios.put(`${URL}/updateProduct/${data._id}`)
+ result=await result.json()
+  }
+  catch(error){
+   console.log("error while updating product ", error.message);
+  }
+}
+
+
 
 
 

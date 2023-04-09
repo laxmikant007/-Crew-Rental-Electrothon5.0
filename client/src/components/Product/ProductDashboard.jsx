@@ -43,7 +43,8 @@ const  ProfileDashbord =() => {
               <div className="card-body">
                 {/* <img src='https://media.istockphoto.com/id/1346124841/photo/successful-construction-site-worker-thinking.jpg?b=1&s=170667a&w=0&k=20&c=Xzq26ISOhRuQK95yVQKmgAqKS6IexXZNqf1TBmHjeZA=' className="img-fluid mb-2" alt="User profile" /> */}
                 {/* <img src={worker.profilePic} className="img-fluid mb-2" alt="User profile" /> */}
-                <img src="https://ak.picdn.net/offset/photos/5ec54169a75ca0db3709300d/medium/offset_943315.jpg" className="img-fluid mb-2" alt="User profile" />
+                {/* <img src="https://ak.picdn.net/offset/photos/5ec54169a75ca0db3709300d/medium/offset_943315.jpg" className="img-fluid mb-2" alt="User profile" /> */}
+                <img src={product.image} alt="User profile" />
                 <h5 className="card-title">{product.name}</h5>
                 <p className="card-text">Delhi , India</p>
                 <div className="btn-group">

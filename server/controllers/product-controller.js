@@ -39,7 +39,6 @@ export const getProduct= async(req,res)=>{
               },
             ]
       });
-
       console.log("res is ",result);
     }
     catch(error){
@@ -47,5 +46,20 @@ export const getProduct= async(req,res)=>{
         res.status(500).json({msg:error.message});
     }
 }
-
+export const updateProduct=async(req,res)=>{
+  try{
+    console.log("req id is ", req.params.id)
+    let result= await Product.updateOne(
+      {_id:req.params.id},
+      {
+          $set:req.body
+      }
+          )
+          res.status(200).json(result)
+  }
+  catch(error){
+    console.log("error while updating product", error.message);
+    res.status(500).json({msg:error.message});
+  }
+}
 
